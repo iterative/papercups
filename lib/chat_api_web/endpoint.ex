@@ -60,13 +60,14 @@ defmodule ChatApiWeb.Endpoint do
   plug(Corsica,
     # FIXME: what's the best way to handle this if we want other websites to
     # be allowed to hit our API?
-    origins: "*",
-    # origins: [
-    #   "http://localhost:3000",
-    #   "http://localhost:4000",
-    #   "https://taro-chat-v1.herokuapp.com",
-    #   ~r{^https?://(.*.?)papercups.io$}
-    # ],
+    # origins: "*",
+    origins: [
+      "http://localhost:3000",
+      "http://localhost:4000",
+      "https://papercups.studio.iterative.ai",
+      "https://studio.datachain.ai",
+      ~r{^https?://(.*.?)papercups.io$}
+    ],
     allow_credentials: true,
     allow_headers: ["Content-Type", "Authorization"],
     log: [rejected: :error, invalid: :warn, accepted: :debug]
