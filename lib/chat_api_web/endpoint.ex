@@ -65,6 +65,7 @@ defmodule ChatApiWeb.Endpoint do
       "http://localhost:3000",
       "http://localhost:4000",
       "https://papercups.studio.iterative.ai",
+      "https://papercups.studio.datachain.ai",
       "https://studio.datachain.ai",
       ~r{^https?://(.*.?)papercups.io$}
     ],
