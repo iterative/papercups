@@ -62,12 +62,9 @@ defmodule ChatApiWeb.Endpoint do
     # be allowed to hit our API?
     # origins: "*",
     origins: [
-      "http://localhost:3000",
-      "http://localhost:4000",
-      "https://papercups.studio.iterative.ai",
       "https://papercups.studio.datachain.ai",
       "https://studio.datachain.ai",
-      ~r{^https?://(.*.?)papercups.io$}
+      ~r{^https?://(.*.?)datachain.ai$}
     ],
     allow_credentials: true,
     allow_headers: ["Content-Type", "Authorization"],
