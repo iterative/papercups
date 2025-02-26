@@ -40,7 +40,7 @@ if config_env() === :prod do
 
   # Configure your database
   config :chat_api, ChatApi.Repo,
-    ssl: require_db_ssl,
+    ssl: true,
     url: database_url,
     show_sensitive_data_on_connection_error: false,
     socket_options: socket_options,
@@ -57,11 +57,11 @@ if config_env() === :prod do
       compress: true,
       transport_options: [socket_opts: [:inet6]]
     ],
-    url: [host: backend_url],
+    url: [host: host, port: 443, scheme: "https"],
     pubsub_server: ChatApi.PubSub,
     secret_key_base: secret_key_base,
     server: true,
-    force_ssl: [rewrite_on: [:x_forwarded_proto], host: nil],
+    force_ssl: [rewrite_on: [:x_forwarded_proto]],
     check_origin: false
 
   if https do
