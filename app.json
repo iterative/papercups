@@ -54,10 +54,7 @@
   "stack": "heroku-20",
   "buildpacks": [
     {
-      "url": "https://github.com/HashNuke/heroku-buildpack-elixir"
-    },
-    {
-      "url": "https://github.com/gigalixir/gigalixir-buildpack-phoenix-static"
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir#378538d1f619abbb6fe318b9bed719cb18d42955"
     }
   ]
 }
