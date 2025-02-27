@@ -1,4 +1,4 @@
-import Config
+use Mix.Config
 
 database_url = System.get_env("DATABASE_URL") || "ecto://postgres:postgres@localhost/chat_api_dev"
 pool_size = String.to_integer(System.get_env("POOL_SIZE") || "10")
