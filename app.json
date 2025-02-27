@@ -51,7 +51,7 @@
   "scripts": {
     "postdeploy": "POOL_SIZE=2 mix ecto.migrate"
   },
-  "stack": "heroku-22",
+  "stack": "heroku-20",
   "buildpacks": [
     {
       "url": "https://github.com/HashNuke/heroku-buildpack-elixir"
